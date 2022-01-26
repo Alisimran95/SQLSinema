@@ -106,26 +106,26 @@ Values  (40,1,1,2,3),
 		(40,5,5,1,1),
 		(50,6,6,4,4)
 
-CREATE VIEW v_TicketInfo
-AS
-Select t.Id , Price, MovieName,GenreName, Duration, CustomerName,CustomerContact,HallNumber,SessionTime,ActorName,ActorLName from Tickets t
-Join Movies m
-ON t.MovieId = m.Id
+-- CREATE VIEW v_TicketInfo
+-- AS
+-- Select t.Id , Price, MovieName,GenreName, Duration, CustomerName,CustomerContact,HallNumber,SessionTime,ActorName,ActorLName from Tickets t
+-- Join Movies m
+-- ON t.MovieId = m.Id
 
-Join Genres g
-ON m.GenreId = g.Id
+-- Join Genres g
+-- ON m.GenreId = g.Id
 
-Join Actors a
-ON m.ActorId = a.Id
+-- Join Actors a
+-- ON m.ActorId = a.Id
 
-Join Customers c
-ON t.CustomerId = c.Id
+-- Join Customers c
+-- ON t.CustomerId = c.Id
 
-Join Halls h
-ON t.HallId = h.Id
+-- Join Halls h
+-- ON t.HallId = h.Id
 
-Join Sessions s
-On t.SessionId = s.Id
+-- Join Sessions s
+-- On t.SessionId = s.Id
 
-Select * FROM v_TicketInfo
+-- Select * FROM v_TicketInfo
 
